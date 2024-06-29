@@ -1,4 +1,3 @@
-
 import ij.*;
 import ij.process.*;
 import ij.gui.*;
@@ -21,7 +20,7 @@ public class Extract_Face_Pixels implements PlugInFilter {
         for (int col = 0; col < width; col++) {
             for (int row = 0; row < height; row++) {
                 int color = ip.getPixel(col, row);
-                Color.RGBtoHSB((color & 0xff0000) >> 16, (color & 0x00ff00) >>8, color & 0x0000ff, hsv);
+                Color.RGBtoHSB((color & 0xff0000) >> 16, (color & 0x00ff00) >> 8, color & 0x0000ff, hsv);
                 //int hue = (int) (hsv[0] * 255);
                 //int sat = (int) (hsv[1] * 255);
                 int sv = (int) (hsv[1] * hsv[2] * 255);
